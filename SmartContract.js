@@ -1,6 +1,6 @@
-import { ethers } from './node_modules/ethers/dist/ethers.min.js';
+// import { ethers } from './node_modules/ethers/dist/ethers.min.js';
 //import { ethers } from "https://quwilliam.github.io/node_modules/ethers/dist/ethers.min.js";
-
+import * as ethers from "./node_modules/ethers/dist/ethers.min.js";
 import * as SmartContractABI from "./SmartContractABICode.js";
 
 let ratio = "1170x540";
