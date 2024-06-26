@@ -1,4 +1,4 @@
-let valuetemp = 116;
+let valuetemp = 117;
 console.log( "INIT JS SCRIPT",valuetemp );
 
 // import * as ethers from "https://raw.githubusercontent.com/quwilliam/PetTheDog/main/node_modules/ethers/dist/ethers.min.js";
