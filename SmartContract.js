@@ -16,4 +16,4 @@ import * as SmartContractABI from "./SmartContractABICode.js";
 
 console.log( " ABI CODE : ",SmartContractABI.testval );
 
-import * as ethers "./node_modules/ethers/dist/ethers.min.js";
+import * as ethers from "./node_modules/ethers/dist/ethers.min.js";
