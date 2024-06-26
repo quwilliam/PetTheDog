@@ -1,4 +1,4 @@
-let valuetemp = 107;
+let valuetemp = 108;
 console.log( "INIT JS SCRIPT",valuetemp );
 
 
