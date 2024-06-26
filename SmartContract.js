@@ -9,9 +9,9 @@ script.src='https://raw.githubusercontent.com/quwilliam/PetTheDog/main/node_modu
 script.onload = function() {
 console.log( "external lib loaded ");
 };
-*/
-document.head.appendChild(script);
 
+document.head.appendChild(script);
+*/
 
 
 
