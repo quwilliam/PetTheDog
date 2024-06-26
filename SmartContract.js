@@ -52,11 +52,11 @@ if(IS_TEST_MODE_ENABLED )
     }
 
 // const SIGNERS =  new PROVIDER.getSigners();
-const SMART_CONTRACT_INTERFACE = await InitContract();
+ // const SMART_CONTRACT_INTERFACE = await InitContract();
 
 
- console.log(" SMART CONTRACT",SmartContractABI.SMART_CONTRACT_ABI_CODE);
- console.log( "CONTRACT METHODS", SMART_CONTRACT_INTERFACE);
+// console.log(" SMART CONTRACT",SmartContractABI.SMART_CONTRACT_ABI_CODE);
+// console.log( "CONTRACT METHODS", SMART_CONTRACT_INTERFACE);
 
  ////------------------------------------------------------------------------------------------------------------------///////
  ////------------------------------------------------------------------------------------------------------------------///////
