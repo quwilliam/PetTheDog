@@ -1,4 +1,4 @@
-let valuetemp = 125;
+let valuetemp = 126;
 console.log( "INIT JS SCRIPT",valuetemp );
 import * as SmartContractABI from "./SmartContractABICode.js";
 
