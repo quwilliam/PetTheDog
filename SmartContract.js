@@ -1,4 +1,4 @@
-let valuetemp = 108;
+let valuetemp = 109;
 console.log( "INIT JS SCRIPT",valuetemp );
 
 
@@ -16,4 +16,4 @@ import * as SmartContractABI from "./SmartContractABICode.js";
 
 console.log( " ABI CODE : ",SmartContractABI.testval );
 
-import * as ethers from "./node_modules/ethers/dist/ethers.min.js";
+// import * as ethers from "./node_modules/ethers/dist/ethers.min.js";
