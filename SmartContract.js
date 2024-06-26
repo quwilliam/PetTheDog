@@ -1,22 +1,25 @@
-let valuetemp = 126;
+let valuetemp = 127;
 console.log( "INIT JS SCRIPT",valuetemp );
 import * as SmartContractABI from "./SmartContractABICode.js";
+
+
+import * as ethers from "https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.1/ethers.min.js";
 
 let ratio = "1170x540";
 
 const SMART_CONTRACT_ADDRESS = "0xD799dB0Cbd223770d35853399708bFCf88858Cca";
-
+console.log(" UNITY WINDOW ",window.unityInstance);
 
 let IS_TEST_MODE_ENABLED = false;
 var SIGNER;
-var PROVIDER = new window.ethers.BrowserProvider(window.ethereum);
-
+var PROVIDER = new ethers.BrowserProvider(window.ethereum);
+console.log(" PROVIDER ",PROVIDER);
 
 /* PUBLIC RPC
 let url = "https://rpc.ankr.com/eth_goerli";
-let customHttpProvider = new window.ethers.JsonRpcProvider(url);
+let customHttpProvider = new ethers.JsonRpcProvider(url);
 
-var PROVIDER = new window.ethers.JsonRpcProvider(url);
+var PROVIDER = new ethers.JsonRpcProvider(url);
 */
 
  
@@ -34,7 +37,7 @@ var PROVIDER = new window.ethers.JsonRpcProvider(url);
 
 if(IS_TEST_MODE_ENABLED )
 {
-  PROVIDER = new window.ethers.JsonRpcProvider('http://localhost:7545');
+  PROVIDER = new ethers.JsonRpcProvider('http://localhost:7545');
 }
 
 //SIGNER = new ethers.BrowserProvider(window.ethereum);
@@ -42,17 +45,18 @@ if(IS_TEST_MODE_ENABLED )
 
  async function InitContract()
     { 
-        const SMART_CONTRACT_INTERFACE = new window.ethers.Contract(SMART_CONTRACT_ADDRESS,SmartContractABI.SMART_CONTRACT_ABI_CODE,PROVIDER);
+        const SMART_CONTRACT_INTERFACE = new ethers.Contract(SMART_CONTRACT_ADDRESS,SmartContractABI.SMART_CONTRACT_ABI_CODE,PROVIDER);
         //const SMART_CONTRACT_INTERFACE = new ethers.Contract(SMART_CONTRACT_ADDRESS,SmartContractABI.SMART_CONTRACT_ABI_CODE,SIGNER);
         return SMART_CONTRACT_INTERFACE;
     }
 
 // const SIGNERS =  new PROVIDER.getSigners();
 const SMART_CONTRACT_INTERFACE = await InitContract();
-
+console.log(" PROVIDER 3 ",PROVIDER);
 
  console.log(" SMART CONTRACT",SmartContractABI.SMART_CONTRACT_ABI_CODE);
  console.log( "CONTRACT METHODS", SMART_CONTRACT_INTERFACE);
+
 
  ////------------------------------------------------------------------------------------------------------------------///////
  ////------------------------------------------------------------------------------------------------------------------///////
@@ -64,7 +68,7 @@ async function SmartContractBalanceRequest( _Wallet_Address)
         let  balance = await PROVIDER.getBalance(_Wallet_Address);
         console.log(" SMART CONTRACT RETURNED BALANCE 2",balance);
         
-        return window.ethers.formatEther(balance);   
+        return ethers.formatEther(balance);   
     }
 window.SmartContractBalanceRequest = SmartContractBalanceRequest;
 
@@ -117,7 +121,7 @@ async function SmartContractRequestWallets()
    console.log(" ADDRESS ",AccountsAddresses);
     console.log(" MODE TEST DISABLED ");*/
     console.log(" MODE TEST DISABLED ");
-   var SIGNER_PROVIDER = new window.ethers.BrowserProvider(window.ethereum);
+   var SIGNER_PROVIDER = new ethers.BrowserProvider(window.ethereum);
 
 
     SIGNER = await SIGNER_PROVIDER.getSigner();
