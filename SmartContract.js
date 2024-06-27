@@ -1,17 +1,16 @@
-import { ethers } from "../node_modules/ethers/dist/ethers.min.js";
-//import { ethers } from "https://quwilliam.github.io/node_modules/ethers/dist/ethers.min.js";
-
+// import { ethers } from "./node_modules/ethers/dist/ethers.min.js";
 import * as SmartContractABI from "./SmartContractABICode.js";
+import * as ethers from "https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.1/ethers.min.js"; 
 
 let ratio = "1170x540";
 
 const SMART_CONTRACT_ADDRESS = "0xD799dB0Cbd223770d35853399708bFCf88858Cca";
-
+console.log(" UNITY WINDOW ",window.unityInstance);
 
 let IS_TEST_MODE_ENABLED = false;
 var SIGNER;
 var PROVIDER = new ethers.BrowserProvider(window.ethereum);
-
+console.log(" PROVIDER ",PROVIDER);
 
 /* PUBLIC RPC
 let url = "https://rpc.ankr.com/eth_goerli";
@@ -50,10 +49,11 @@ if(IS_TEST_MODE_ENABLED )
 
 // const SIGNERS =  new PROVIDER.getSigners();
 const SMART_CONTRACT_INTERFACE = await InitContract();
-
+console.log(" PROVIDER 3 ",PROVIDER);
 
  console.log(" SMART CONTRACT",SmartContractABI.SMART_CONTRACT_ABI_CODE);
  console.log( "CONTRACT METHODS", SMART_CONTRACT_INTERFACE);
+
 
  ////------------------------------------------------------------------------------------------------------------------///////
  ////------------------------------------------------------------------------------------------------------------------///////
