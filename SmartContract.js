@@ -1,6 +1,9 @@
-// import { ethers } from "./node_modules/ethers/dist/ethers.min.js";
+let valuetemp = 127;
+console.log( "INIT JS SCRIPT",valuetemp );
 import * as SmartContractABI from "./SmartContractABICode.js";
-import * as ethers from "https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.1/ethers.min.js"; 
+
+
+import * as ethers from "https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.1/ethers.min.js";
 
 let ratio = "1170x540";
 
@@ -488,3 +491,4 @@ window.gettimeblock2 = gettimeblock2;
    // let timeblock = await Promise.resolve(SMART_CONTRACT_INTERFACE.gettimeblock().call());
     return timeblock;
   }
+
